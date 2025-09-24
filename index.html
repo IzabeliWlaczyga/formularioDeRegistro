@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <h2>Formulário Completo</h2>
+        <form action="" method="post">
+            <div class="form-group-1">
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" id="nome">
+            </div>
+
+            <div class="form-group-2">
+                <label for="">Email</label>
+                <input type="email">
+            </div>
+            <div class="form-group-2">
+                <label for="">Senha:</label>
+                <input type="password">
+            </div>
+
+            <div>
+                <label for="">Número:</label>
+                <input type="number">
+            </div>
+
+            <div>
+                <label for="">Telefone:</label>
+                <input type="tel">
+            </div>
+
+            <div>
+                <label for="">URL:</label>
+                <input type="url">
+            </div>
+
+            <div>
+                <label for="">Data:</label>
+                <input type="date">
+            </div>
+
+            <div>
+                <label for="">Hora:</label>
+                <input type="time">
+            </div>
+
+            <div>
+                <label for="">Cor</label>
+                <input type="color">
+            </div>
+
+            <div>
+                <label for="">Nível sat:</label>
+                <input type="range" min="0" max="10">
+            </div>
+
+            <div>
+                <label for="">Arquivo:</label>
+                <input type="file">
+            </div>
+
+            <div class="form-group-2">
+                <label for="">Gênero</label>
+                <div class="radio-group">
+                    <div>
+                    <input type="radio" name="genero" id="masculino" value="m">
+                    <label for="">Masculino</label>
+                    </div>
+
+                    <div>
+                    <input type="radio" name="genero" id="feminino" value="f">
+                    <label for="">Feminino</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group-2">
+                <label for="">Interesses:</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" name="interesse" id="tecnologia">
+                    <label for="">Tecnologia</label>
+                    <input type="checkbox" name="interesse" id="esporte">
+                    <label for="">Esporte</label>
+                    <input type="checkbox" name="interesse" id="musica">
+                    <label for="">Musica</label>
+                </div>
+            </div>
+
+            <div class="form-group-1">
+                <label for="">Escolha:</label>
+                <select name="opcao" id="opcao">
+                    <option value="">Selecione...</option>
+                    <option value="1">Opc 1</option>
+                    <option value="2">Opc 2</option>
+                    <option value="3">Opc 3</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="">Mensagem:</label>
+                <textarea name="msg" id="msg"></textarea>
+            </div>
+            
+            <div>
+                <input type="submit" value="Enviar">
+            </div>
+        </form>
+    </section>
+</body>
+</html>
