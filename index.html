@@ -3,113 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="form.css">
-    <title>Document</title>
+    <title>Formulario de cadastro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section>
-        <h2>Formulário Completo</h2>
-        <form action="" method="post">
-            <div class="form-group-1">
-                <label for="nome">Nome</label>
-                <input type="text" name="nome" id="nome">
-            </div>
-
-            <div class="form-group-2">
-                <label for="">Email</label>
-                <input type="email">
-            </div>
-            <div class="form-group-2">
-                <label for="">Senha:</label>
-                <input type="password">
-            </div>
-
-            <div>
-                <label for="">Número:</label>
-                <input type="number">
-            </div>
-
-            <div>
-                <label for="">Telefone:</label>
-                <input type="tel">
-            </div>
-
-            <div>
-                <label for="">URL:</label>
-                <input type="url">
-            </div>
-
-            <div>
-                <label for="">Data:</label>
-                <input type="date">
-            </div>
-
-            <div>
-                <label for="">Hora:</label>
-                <input type="time">
-            </div>
-
-            <div>
-                <label for="">Cor</label>
-                <input type="color">
-            </div>
-
-            <div>
-                <label for="">Nível sat:</label>
-                <input type="range" min="0" max="10">
-            </div>
-
-            <div>
-                <label for="">Arquivo:</label>
-                <input type="file">
-            </div>
-
-            <div class="form-group-2">
-                <label for="">Gênero</label>
-                <div class="radio-group">
-                    <div>
-                    <input type="radio" name="genero" id="masculino" value="m">
-                    <label for="">Masculino</label>
-                    </div>
-
-                    <div>
-                    <input type="radio" name="genero" id="feminino" value="f">
-                    <label for="">Feminino</label>
-                    </div>
+    
+    <form>
+        <section>
+            <h2>Dados Pessoais</h2>
+            <div class="row">
+                <div class="form-floating col">
+                    <input type="text" class="form-control" id="nome" required>
+                    <label for="nome" >Nome Completo*</label>
+                </div>
+                <div class="form-floating col">
+                    <input type="date" class="form-control" id="datanasc">
+                    <label for="datanasc">Data de Nascimento</label>
                 </div>
             </div>
+            <div class="form-floating">
+                <input type="email" class="form-control" id="email" required>
+                <label for="email">E-mail*</label>
+            </div>
+            <div class="form-floating">
+                <input type="tel" class="form-control" id="telefone" required>
+                <label for="telefone">Telefone*</label>
+            </div>
+        </section>
 
-            <div class="form-group-2">
-                <label for="">Interesses:</label>
-                <div class="checkbox-group">
-                    <input type="checkbox" name="interesse" id="tecnologia">
-                    <label for="">Tecnologia</label>
-                    <input type="checkbox" name="interesse" id="esporte">
-                    <label for="">Esporte</label>
-                    <input type="checkbox" name="interesse" id="musica">
-                    <label for="">Musica</label>
+        <section>
+            <h2>Endereço de Entrega</h2>
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="rua" required>
+                    <label for="rua">Rua*</label>
                 </div>
-            </div>
+                <div class="row">
+                    <div class="form-floating col">
+                    <input type="number" class="form-control" id="num" required>
+                    <label for="num">N°*</label>
+                </div>
+                <div class="form-floating col">
+                    <input type="text" class="form-control" id="cep" required>
+                    <label for="cep">CEP*</label>
+                </div>
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="complemento">
+                    <label for="complemento">Complemento</label>
+                </div>
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="bairro" required>
+                    <label for="bairro">Bairro*</label>
+                </div>
+                <div class="row">
+                    <div class="form-floating col">
+                        <input type="text" class="form-control" id="cidade" required>
+                        <label for="cidade">Cidade*</label>
+                    </div>
+                    <div class="form-floating col">
+                        <input type="text" class="form-control" id="estado" required>
+                        <label for="estado">Estado*</label>
+                    </div>
+                </div>
+                </div>
+        </section>
 
-            <div class="form-group-1">
-                <label for="">Escolha:</label>
-                <select name="opcao" id="opcao">
-                    <option value="">Selecione...</option>
-                    <option value="1">Opc 1</option>
-                    <option value="2">Opc 2</option>
-                    <option value="3">Opc 3</option>
-                </select>
+        <section>
+            <h2>Preferencias de entrega</h2>
+           <div class="row">
+             <fieldset class="col">
+                <legend>Método de entrega*</legend>
+                <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                <label class="form-check-label" for="inlineRadio1">Normal</label>
             </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                <label class="form-check-label" for="inlineRadio2">Expresso</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option2">
+                <label class="form-check-label" for="inlineRadio3">Retirada em</label>
+            </div>
+            </fieldset>
+            <div class="form-floating col">
+                <input type="time" class="form-control" id="horarioEntrega">
+                <label for="horarioEntrega">Horário de entrega de preferência</label>
+            </div>
+           </div>
+        </section>
 
-            <div>
-                <label for="">Mensagem:</label>
-                <textarea name="msg" id="msg"></textarea>
+        <section>
+            <h2>Segurança e Conta</h2>
+            <div class="form-floating">
+                <input type="password" class="form-control" id="senha" required>
+                <label for="senha">Senha*</label>
             </div>
-            
-            <div>
-                <input type="submit" value="Enviar">
+            <div class="form-floating">
+                <input type="password" class="form-control" id="senhaConfirmacao" required>
+                <label for="senhaConfirmacao">Confirme a senha*</label>
             </div>
-        </form>
-    </section>
+        </section>
+        <div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </div>
+    </form>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
